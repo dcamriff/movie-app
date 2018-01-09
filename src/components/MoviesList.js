@@ -5,9 +5,10 @@ import Movie from './Movie'
 class MoviesList extends Component {
     render () {
 
-        const moviesList = this.props.movies.map((movie) => {
+        const moviesList = this.props.movies.map((movie, index) => {
             return (
                 <Movie
+                key={index}
                 title={movie.title}
                 rating={movie.rating}
                 description={movie.description} />
