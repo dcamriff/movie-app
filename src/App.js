@@ -14,8 +14,13 @@ class App extends Component {
       {title: 'A Third Movie', rating: 'PG', description: 'this is yet another movie'},
     ]
 
+const isLoggedIn = false
+
     return (
         <div>
+          <div>
+            The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+          </div>
           <MoviesList movies={ moviesFromDatabase } />
         </div>
     )
